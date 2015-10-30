@@ -1,4 +1,5 @@
-README.txt
+This repo is a simple Tic-Tac-Toe game written with the MEAN stack.
+
 1. Run "npm install -g bower grunt-cli"
 2. Run "npm install"
 3. Run "bower install"
