@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Based on HTML5 Bones | http://html5bones.com -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Tic Tac Toe Game</title>
+
+        <meta name="description" content="">
+
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="all">
+        <link href="app/app.css" rel="stylesheet" media="all">
+        
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/http-helper.service.js"></script>
+        <script src="app/game.service.js"></script>
+        <script src="app/game.controller.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Tic Tac Toe Game</h2>
+
+            <div id="board-wrapper" ng-app="tic-tac-toe" ng-controller="boardController" data-ng-init="startNewGame()">
+                
+
+                <div ng-show="scoreMessage != null">
+                    <h3 id="score-message">{{scoreMessage}}</h3>
+                </div>
+
+                <div class="row">
+                    <div id="square1" class="col-md-4 square" ng-click="onCellClick($event)" data-id="1">
+
+                    </div>
+                    <div id="square2" class="col-md-4 square" ng-click="onCellClick($event)" data-id="2">
+
+                    </div>
+                    <div id="square3" class="col-md-4 square" ng-click="onCellClick($event)" data-id="3">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="square4" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="4">
+
+                    </div>
+                    <div id="square5" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="5">
+
+                    </div>
+                    <div id="square6" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="6">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="square7" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="7">
+
+                    </div>
+                    <div id="square8" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="8">
+
+                    </div>
+                    <div id="square9" class="col-md-4 square" ng-click="onCellClick($event)"  data-id="9">
+
+                    </div>
+                </div>
+
+                <a id="btn-restart" class="btn btn-primary" href=".">Restart</a>
+
+                <div style="display:none">
+                    <input type="text" ng-bind="{{gameID}}" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+

@@ -1,0 +1,41 @@
+.square {
+    width: 120px;
+    height: 120px;
+    border: 3px solid navy;
+    margin: 5px;
+}
+
+#btn-restart {
+	width: 100px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 129px;
+	font-size: 19px;
+}
+
+.square:hover, .square.crossed {
+    background:url(../assets/images/cross.png);
+    background-size: 115px 115px;
+    background-repeat: no-repeat;
+}
+
+.square.zeroed {
+    background:url(../assets/images/zero.png);
+    background-size: 115px 115px;
+    background-repeat: no-repeat;
+}
+
+#board-wrapper {
+    width: 800px;
+}
+
+.square.zeroed.win, .square.crossed.win {
+    -webkit-animation: blink 1s step-end 2;
+            animation: blink 1s step-end 2;
+}
+@-webkit-keyframes blink { 50% { visibility: hidden; }}
+        @keyframes blink { 50% { visibility: hidden; }}
+
+#score-message {
+    color: red;
+}
